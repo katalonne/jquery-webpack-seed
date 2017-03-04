@@ -1,0 +1,1 @@
+webpackJsonp([1],[function(n,a){"use strict";var t=47.0279717,r=28.8185404;window.markerLatLng={lat:t,lng:r}}]);

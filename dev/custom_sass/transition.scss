@@ -1,0 +1,31 @@
+@for $i from 0 through 5000 {
+  %transition#{$i}linear{
+    transition: $i + 0ms linear;
+  }
+}
+
+@for $i from 0 through 5000 {
+  %transition#{$i}ease{
+    transition: $i + 0ms ease;
+  }
+}
+
+
+@for $i from 0 through 5000 {
+  %transition#{$i}easein{
+    transition: $i + 0ms ease-in;
+  }
+}
+
+
+@for $i from 0 through 5000 {
+  %transition#{$i}easeout{
+    transition: $i + 0ms ease-out;
+  }
+}
+
+@for $i from 0 through 5000 {
+  %transition#{$i}easeinout{
+    transition: $i + 0ms ease-in-out;
+  }
+}

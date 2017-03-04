@@ -1,0 +1,303 @@
+#footer{
+    @extend %posrel;
+    background-color:#002e4d;
+    @extend %colorWhite;
+    border-top:10px solid #00aeef;
+    .footer-upper-bar{
+        @extend %height40;
+        @extend %posabs;
+        @extend %top0;
+        transform: translate(0,-100%);
+        background-color:#002E4D;
+        @extend %width175;
+        border-top:10px solid #00aeef;
+        &:before{
+            content:'';
+            // @extend %height40;
+            // height:100%;
+            @extend %height50;
+            @extend %posabs;
+            @extend %left0;
+            // @extend %top0;
+            top:-10px;
+            transform: translate(-100%,0%);
+            background-color:#002E4D;
+            width:1000px;
+            border-top:10px solid #00aeef;
+        }
+        &:after{
+            @extend %posabs;
+            @extend %right0;
+            transform: translate(100%, 0);
+            content: '';
+            width: 0;
+            height: 0;
+            border-bottom: 30px solid #002E4D;
+            border-right: 13px solid transparent;
+        }
+        .special-rectangle{
+            @extend %posabs;
+            @extend %zIndex10;
+            // @extend %right0;
+            // @extend %top0;
+            top:5px;
+            right:-26px;
+            // border:1px solid red;
+            width:40px;
+            height:10px;
+            transform: rotate(60deg);
+            background-color:#00aeef;
+        }
+    }
+    .upper-footer{
+        @extend %paddingBottom20;
+        @include max(1150px) {
+            padding-bottom:50px;
+        }
+        .upper-footer-container{
+            @extend %paddingTop40;
+            @extend %fontSize0;
+            .footer-header-section{
+                @extend %fontSize18;
+                font-weight: 500;
+                @extend %posrel;
+                @extend %paddingLeft14;
+                @extend %marginBottom10;
+                @include max(1150px) {
+                    padding-left:0;
+                }
+                &:before{
+                    // border:1px solid red;
+                    content:'';
+                    @extend %posabs;
+                    @extend %top50perc;
+                    @extend %left0;
+                    transform: translate(0,-50%);
+                    @extend %width4;
+                    @extend %height28;
+                    background-color: #00aeef;
+                    height:100%;
+                    @include max(1150px) {
+                        display: none;
+                    }
+                    // @extend
+                }
+            }
+            .logo-section{
+                @extend %paddingTop15;
+                @extend %ib-verticaltop;
+                @extend %width160;
+                @extend %fontSize14;
+                // border:1px solid red;
+                @extend %posrel;
+                @include max(1150px) {
+                    width:100%;
+                    text-align: center;
+                    margin-bottom:50px;
+                }
+                img{
+                    width:160px;
+                    // width:100%;
+                }
+            }
+            .articles-section{
+                // border:1px solid red;
+                @extend %ib-verticaltop;
+                @extend %fontSize14;
+                @extend %width400;
+                @extend %paddingLeft30;
+                @extend %paddingRight23;
+                @include max(1150px) {
+                    width:50%;
+                    margin-bottom:50px;
+                    text-align: center;
+                    padding-right:10px;
+                    padding-left:0;
+                }
+                @include max(767px) {
+                    width:100%;
+                }
+                
+                .articles-ul{
+                    @include max(1150px) {
+                        padding-left:30px;
+                        padding-right:20px;
+                    }
+                    @include max(767px) {
+                        padding-left:10px;
+                        padding-right:10px;
+                        // text-align: center;
+                    }
+                    li{
+                        @extend %paddingBottom6;
+                        @extend %paddingTop4;
+                        @include max(1150px) {
+                            text-align: left;
+                        }
+                        @include max(767px) {
+                            text-align: center;
+                        }
+                        &:not(:last-of-type) {
+                            border-bottom:1px solid #fff;
+                        }
+                        a{
+                            // border:1px solid red;
+                            transition:150ms ease-out;
+                            &:hover{
+                                @include min(993px) {
+                                    color:#00AEEF;
+                                    transition:200ms ease-in-out;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .contact-section{
+                // border:1px solid red;
+                @extend %ib-verticaltop;
+                @extend %fontSize14;
+                @extend %width295;
+                @extend %paddingRight30;
+                @include max(1150px) {
+                    text-align: center;
+                    width:50%;
+                    margin-bottom:30px;
+                    padding-left:10px;
+                    // padding-right:10px;
+                }
+                @include max(767px) {
+                    padding-left:0;
+                    padding-right:0;
+                }
+                @include max(767px) {
+                    width:100%;
+                }
+                a{
+                    transition:150ms ease-out;
+                    &:hover{
+                        @include min(993px) {
+                            color:#00AEEF;
+                            transition:200ms ease-in-out;
+                        }
+                    }
+                }
+                .contacts-list{
+                    .contact{
+                        @extend %fontSize0;
+                        @extend %marginBottom10;
+                        .icon{
+                            @extend %ib-verticaltop;
+                            // border:1px solid red;
+                            svg{
+                                @extend %width17;
+                                height:auto;
+                            }
+                        }
+                        .contact-description{
+                            @extend %fontSize14;
+                            @extend %ib-verticaltop;
+                            @extend %paddingLeft10;
+                            // border:1px solid red;
+                            a{
+                                display: block;
+                                // border:1px solid red;
+                            }
+                        }
+                    }
+                }
+            }
+            .newsletter-section{
+                // border:1px solid red;
+                @extend %ib-verticaltop;
+                @extend %fontSize14;
+                width:calc(100% - 295px - 400px - 160px);
+                @include max(1150px) {
+                    width:100%;
+                    text-align: center;
+                }
+                .send-mail{
+                    @extend %width100perc;
+                    @include max(1150px) {
+                        padding-left:30px;
+                        padding-right:30px;
+                    }
+                    @include max(767px) {
+                        padding-left:10px;
+                        padding-right:10px;
+                        // text-align: center;
+                    }
+                    .input{
+                        background:transparent;
+                        @extend %posrel;
+                        // border:1px solid red;
+                        @extend %width100perc;
+                        input{
+                            border: solid 2px #ffffff;
+                            outline:0;
+                            background:transparent;
+                            @extend %paddingLeft15;
+                            @extend %paddingRight55;
+                            @extend %height40;
+                            @extend %width100perc;
+                        }   
+                        button{
+                            @extend %posabs;
+                            @extend %top0;
+                            @extend %right0;
+                            @extend %height40;
+                            outline:0;
+                            background:transparent;
+                            border:0;
+                            border-left:solid 2px #ffffff;
+                            @extend %width40;
+                            transition: 250ms ease-out;
+                            &:hover{
+                                @include min(993px) {
+                                    background-color:#fff;
+                                    transition: 150ms ease-in-out;
+                                    i{
+                                        color:#002E4D;
+                                        transition: 150ms ease-in-out;
+                                    }
+                                }
+                            }
+                            i{
+                                font-size: 12px;
+                                transition: 250ms ease-out;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+    .bottom-footer{
+        // border:1px solid red;
+        overflow: hidden;
+        border-top:1px solid #fff;
+        @extend %height40;
+        @extend %posrel;
+        .bottom-footer-container{
+            @extend %height40;
+            @extend %posrel;
+            .bottom-footer-left-part{
+                font-weight: 500;
+                @extend %fontSize16;
+                @extend %posabs;
+                @extend %left0;
+                @extend %top50perc;
+                transform: translate(0,-50%);
+                @include max(1200px) {
+
+                    left:10px;
+                }
+                @include max(767px) {
+                    left:50%;
+                    transform: translate(-50%,-50%);
+                }
+            }
+        }
+    }
+}

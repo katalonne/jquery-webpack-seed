@@ -1,0 +1,12 @@
+@for $i from 0 through 800 {
+  %top#{$i}{
+    top: $i + 0px;
+  }
+}
+
+
+@for $i from 0 through 100 {
+  %top#{$i}perc{
+    top: $i + 0%;
+  }
+}

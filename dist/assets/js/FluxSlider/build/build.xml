@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build>
+	<version>1.4.4</version>
+	<docroot>../js/</docroot>
+	<output>
+		<file name="flux">
+			<source>src/flux.slider.js</source>
+			<source>src/flux.browser.js</source>
+			<source>src/flux.transitions.js</source>
+			<source>src/flux.transitions.bars.js</source>
+			<source>src/flux.transitions.bars3d.js</source>
+			<source>src/flux.transitions.blinds.js</source>
+			<source>src/flux.transitions.blinds3d.js</source>
+			<source>src/flux.transitions.zip.js</source>
+			<source>src/flux.transitions.blocks.js</source>
+			<source>src/flux.transitions.blocks2.js</source>
+			<source>src/flux.transitions.concentric.js</source>
+			<source>src/flux.transitions.warp.js</source>
+			<source>src/flux.transitions.cube.js</source>
+			<source>src/flux.transitions.tiles3d.js</source>
+			<source>src/flux.transitions.turn.js</source>
+			<source>src/flux.transitions.slide.js</source>
+			<source>src/flux.transitions.swipe.js</source>
+			<source>src/flux.transitions.dissolve.js</source>
+		</file>
+		<file name="flux.jquery">
+			<source>src/flux.jquery.js</source>
+		</file>
+	</output>
+</build>

@@ -1,0 +1,101 @@
+@import './normalize';
+// @import "~susy/sass/susy";
+@import "~lightbox2/dist/css/lightbox";
+// @import './media-width';
+
+
+@import './assets/Swiper-3.3.1/dist/css/swiper.min';
+@import './assets/lity-2.1.1/dist/lity.min';
+
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    // transform: translate3d(0,0,0);
+    // -webkit-transform: translate3d(0,0,0);
+}
+
+// $susy: ( columns: 12, gutters: 1/4, math: fluid, output: float, gutter-position: inside, );
+body {
+    // width:1110px;
+    width: 100%;
+    // height:100vh;
+    // overflow:hidden;
+    // border:1px solid red;
+    margin: 0 auto;
+    // margin-bottom:100px;
+    // @include span(3 of 12);
+    #preload{
+        position : absolute;
+            //   margin: 0 auto;
+            //   height:50vh;
+        left :calc(50%);
+        top :calc(50%);
+        transform: translate(-50%,-50%);
+        .iconload{
+            text-align:center;
+            #spinner{
+                // display:block;
+                // position : absolute;
+                // //   margin: 0 auto;
+                // //   height:50vh;
+                // left :calc(50% - 25px);
+                // top :calc(50% - 25px);
+                font-size : 50px;
+                color : #034C77;
+                -webkit-animation: spin 2s linear infinite;
+                animation: spin 1500ms linear infinite;
+            }
+        }
+            
+    }
+
+    #main_container{
+        // opacity: 0;
+        // overflow-y: hidden;
+        // height:10vh;
+        // overflow:hidden;
+        // display:none;
+        // visibility: hidden;
+    }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+
+.border {
+    border: 1px solid red;
+}
+
+@media screen and (max-width: 1199px) {
+    body {
+        width: 100%;
+    }
+}
+
+
+.disable-hover {
+  pointer-events: none;
+}
+
+
+
+
+
+
+
+
+
+

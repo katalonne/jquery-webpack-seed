@@ -1,0 +1,25 @@
+@for $i from 0 through 1440 {
+  %height#{$i}{
+    height: $i + 0px;
+  }
+}
+
+@for $i from 0 through 1440 {
+  %maxHeight#{$i}{
+    max-height: $i + 0px;
+  }
+}
+
+@for $i from 0 through 1440 {
+  %minHeight#{$i}{
+    min-height: $i + 0px;
+  }
+}
+
+
+
+@for $i from 0 through 1440 {
+  %lineHeight#{$i}{
+    line-height: $i + 0px;
+  }
+}

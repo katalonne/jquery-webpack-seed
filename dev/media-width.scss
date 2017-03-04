@@ -1,0 +1,31 @@
+
+
+@mixin max($media) {
+    
+    @media only screen and (max-width: $media) { @content; }
+
+}
+
+@mixin maxh($media) {
+    
+    @media only screen and (max-height: $media) { @content; }
+
+}
+
+@mixin min($media) {
+    
+    @media only screen and (min-width: $media) { @content; }
+
+}
+
+@mixin minh($media) {
+    
+    @media only screen and (min-height: $media) { @content; }
+
+}
+
+@mixin minmax($min, $max) {
+    
+    @media only screen and (min-width: $min) and (max-width: $max) { @content; }
+
+}

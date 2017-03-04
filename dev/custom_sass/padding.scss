@@ -1,0 +1,45 @@
+@for $i from 0 through 500 {
+  %paddingLeft#{$i}{
+    padding-left: $i + 0px;
+  }
+}
+
+
+
+@for $i from 0 through 500 {
+  %paddingRight#{$i}{
+    padding-right: $i + 0px;
+  }
+}
+
+
+@for $i from 0 through 500 {
+  %paddingTop#{$i}{
+    padding-top: $i + 0px;
+  }
+}
+
+
+@for $i from 0 through 500 {
+  %paddingBottom#{$i}{
+    padding-bottom: $i + 0px;
+  }
+}
+
+
+
+@for $i from 0 through 100 {
+    %max1200paddingLeft#{$i}{
+        @include max(1200px) {
+            padding-left: $i + 0px;
+        }
+    }
+}
+
+@for $i from 0 through 100 {
+    %max1200paddingRight#{$i}{
+        @include max(1200px) {
+            padding-right: $i + 0px;
+        }
+    }
+}

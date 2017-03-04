@@ -1,0 +1,13 @@
+
+
+@for $i from 0 through 200 {
+  %fontSize#{$i}{
+    font-size: $i + 0px;
+  }
+}
+
+//   $class-slug: for !default
+
+// @for $i from 1 through 4
+//   .#{$class-slug}-#{$i}
+//     width: 60px + $i

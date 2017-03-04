@@ -1,0 +1,12 @@
+@for $i from 0 through 200 {
+  %right#{$i}{
+    right: $i + 0px;
+  }
+}
+
+@for $i from 0 through 100 {
+  %right#{$i}perc{
+    right: $i + 0%;
+  }
+}
+

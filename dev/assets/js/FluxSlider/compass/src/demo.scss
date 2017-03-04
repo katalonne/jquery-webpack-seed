@@ -1,0 +1,208 @@
+ /* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass/css3";
+
+@include reset-html5;
+
+*
+{
+	@include box-sizing('border-box');
+}
+
+a
+{
+	color: #CCC;
+	text-decoration: none;
+}
+
+html
+{
+	background: #2F2F2F;
+}
+
+body
+{
+	//@include linear-gradient(color-stops(#333, #000));
+	background: #2F2F2F;
+	min-height: 100%;
+	font-family: helvetica, arial, sans-serif;
+	
+	overflow-x: hidden; // Used to prevent scroll bars appearing for some 3d transforms
+	
+	margin: 0;
+	
+ 	section.container
+	{
+		width: 790px;
+		margin: 40px auto;
+		
+		h1
+		{
+			color: #DDD;
+			font-size: 3em;
+			font-weight: bold;
+			text-align: center;
+			text-shadow: 0 1px 0px #000;
+			text-transform: lowercase;
+			margin-bottom: 0.2em;
+		}
+		
+		h2
+		{
+			font-size: 0.8em;
+			color: #666;
+			text-align: center;
+			margin-bottom: 4em;
+			text-shadow: 0 1px 0px rgba(#000, 0.5);
+		}
+		
+		div#slider
+		{
+			@include border-radius(3px);
+			@include box-sizing('content-box');
+			padding: 20px;
+			background: rgba(#000, 0.3);
+
+			-webkit-box-shadow: 0 1px 0 rgba(#FFF, 0.1), 0 0 8px rgba(#000, 0.9) inset;
+			
+			div.fluxslider
+			{
+				div.surface
+				//div.images
+				{
+					width: 100%;
+					border: 1px solid rgba(#FFF, 0.1);
+					@include box-sizing('content-box');
+				}
+				
+				ul.pagination
+				{
+					@include box-sizing('content-box');
+					padding: 10px 0 !important;
+					overflow: hidden;
+					
+					li
+					{
+						text-indent: 10000px;
+						height: 8px;
+						width: 8px;
+						@include border-radius(10px);
+						background: rgba(#000, 0.6);
+						-webkit-box-shadow: 0 1px 0 rgba(#FFF, 0.1);
+						
+						&.current
+						{
+							background: rgba(#FFF, 0.2);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+footer
+{
+	width: 100%;
+	text-align: center;
+	font-size: 0.7em;
+	//text-shadow: 0 1px 0px rgba(#000, 0.5);
+	margin-top: 4em;
+	color: #666;
+	
+	p
+	{
+		margin-bottom: 2em;
+	}
+}
+
+// Transition Gallery Demo
+body#transitiongallery
+{
+	section.container
+	{
+		width: 960px;
+		
+		div#slidercontainer
+		{
+			position: relative;
+			
+			div#slider
+			{
+
+			}
+			
+			div#transitions
+			{
+				position: absolute;
+				z-index: 50;
+				top: 20px;
+				right: 20px;
+				width: 150px;
+				font-size: 0.85em;
+				
+				h2
+				{
+					font-size: 1em;
+					text-align: left;
+					color: #CCC;
+					font-weight: bold;
+					margin-bottom: 0.7em;
+				}
+				
+				ul
+				{
+					margin-bottom: 1.5em;
+					
+					li
+					{
+						font-size: 0.8em;
+						margin-bottom: 0.7em;
+						
+						a
+						{
+							display: block;
+							@include border-radius(3px);
+							padding: 0.5em;
+							@include linear-gradient(color-stops(#444, #333));
+							border: 1px solid rgba(#FFF, 0.1);
+							-webkit-box-shadow: 0px 1px 0px rgba(#000, 0.2) inset;
+							-moz-box-shadow: 0px 1px 0px rgba(#000, 0.2) inset;
+							-o-box-shadow: 0px 1px 0px rgba(#000, 0.2) inset;
+							box-shadow: 0px 1px 0px rgba(#000, 0.2) inset;
+							position: relative;
+							
+							&:active
+							{
+								top: 1px;
+								
+							}
+							
+							&.new
+							{
+								&:after
+								{
+									content: 'New';
+									font-size: 0.8em;
+									padding: 0.2em 0.4em;
+									color: #FFF;
+									@include linear-gradient(color-stops(#dd4c10, #d23a13));
+									border: 1px solid #FFF;
+									@include border-radius(4px);
+									@include box-shadow(rgba(#000, 0.2), 0px, 1px, 3px);
+									position: absolute;
+									top: -0.5em;
+									right: -0.5em;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

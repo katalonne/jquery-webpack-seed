@@ -1,0 +1,75 @@
+@for $i from 0 through 1920 {
+  %width#{$i}{
+    width: $i + 0px;
+  }
+}
+
+@for $i from 0 through 400 {
+  %width#{$i}perc{
+    width: $i + 0%;
+  }
+}
+
+
+@for $i from 0 through 100 {
+    %max1200width#{$i}perc{
+        @include max(1200px) {
+            width: $i + 0%;
+        }
+    }
+}
+
+
+@for $i from 0 through 1000 {
+    %max1200width#{$i}{
+        @include max(1200px) {
+            width: $i + 0px;
+        }
+    }
+}
+
+
+@for $i from 0 through 100 {
+    %max767width#{$i}perc{
+        @include max(767px) {
+            width: $i + 0%;
+        }
+    }
+}
+
+@for $i from 0 through 1000 {
+    %max767width#{$i}{
+        @include max(767px) {
+            width: $i + 0px;
+        }
+    }
+}
+
+
+@for $i from 0 through 100 {
+    %max992width#{$i}perc{
+        @include max(992px) {
+            width: $i + 0%;
+        }
+    }
+}
+
+@for $i from 0 through 1000 {
+    %max992width#{$i}{
+        @include max(992px) {
+            width: $i + 0px;
+        }
+    }
+}
+
+// @for $i from 0 through 1920 {
+//     @include max(#{$i}px) {
+//         @for $j from 0 through 1920 {
+//             %width#{$j}{
+//                 width: $j + 0px;
+//             }
+//         }
+//     }
+// }
+
+

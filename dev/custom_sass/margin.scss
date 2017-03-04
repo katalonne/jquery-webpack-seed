@@ -1,0 +1,32 @@
+@for $i from 0 through 1000 {
+  %marginLeft#{$i}{
+    margin-left: $i + 0px;
+  }
+}
+
+
+
+@for $i from 0 through 1000 {
+  %marginRight#{$i}{
+    margin-right: $i + 0px;
+  }
+}
+
+
+@for $i from 0 through 1000 {
+  %marginTop#{$i}{
+    margin-top: $i + 0px;
+  }
+}
+
+
+@for $i from 0 through 1000 {
+  %marginBottom#{$i}{
+    margin-bottom: $i + 0px;
+  }
+}
+
+
+%marginCenter{
+  margin:0 auto;
+}
