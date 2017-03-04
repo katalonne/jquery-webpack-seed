@@ -1,0 +1,3 @@
+"# Jquery Webpack Seed"
+
+ 
