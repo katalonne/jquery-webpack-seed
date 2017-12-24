@@ -1,3 +1,4 @@
-"# Jquery Webpack Seed"
+# Jquery Webpack Seed - Deprecated
+- webpack@1 
 
  
